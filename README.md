@@ -1,21 +1,19 @@
 # Contents
 <div id="contents">
-<h2>Main</h2>h2>
-<a href="#features">Features</a>
-<a href="#httpRequest">http.Request request context</a>
-<a href="#fasthttp">Fasthttp implementation example</a>
-<h2>How it works</h2>
-<a href="#howItWorks">How it works</a>
-<a href="#classicStyle">Classic style</a>
-<a href="#headersAndCORS">Headers & CORS setup</a>
-<h2>Validation</h2>
-<a href="#validation"> Validation</a>
-<h2>Other</h2>
-<a href="#servingFiles">Serving files and folders</a>
-<a href="#abstraction">Abstraction modules</a>
-<a href="#autoGen">Auto-generated documentation</a>	
-
-
+<h2>Main</h2><
+<a href="#features">Features</a><br>
+<a href="#httpRequest">http.Request request context</a><br>
+<a href="#fasthttp">Fasthttp implementation example</a><br>
+<h2>How it works</h2><br>
+<a href="#howItWorks">How it works</a><br>
+<a href="#classicStyle">Classic style</a><br>
+<a href="#headersAndCORS">Headers & CORS setup</a><br>
+<h2>Validation</h2><br>
+<a href="#validation"> Validation</a><br>
+<h2>Other</h2><br>
+<a href="#servingFiles">Serving files and folders</a><br>
+<a href="#abstraction">Abstraction modules</a><br>
+<a href="#autoGen">Auto-generated documentation</a>	<br>
 
 </div>
 
