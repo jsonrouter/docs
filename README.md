@@ -569,14 +569,11 @@ An example of this is a piece of middleware that validates the user's session, a
 
 <a href="#contents">Top</a>
 
-The best feature of GF is that she will create documentation based on the internal state of the router. This allows front-end developers access to a definitive resource describing the structure of your API.
+A great feature of JSONrouter will create documentation based on the internal state of the router. This allows front-end developers access to a definitive resource describing the structure of your API. When initialising your app, you can choose OpenAPI spec either v2 or v3.
 
 ## JSON API schema
 
-Currently GF will serve a documentation JSON file by default at the /_.json path. This will describe each handler using any available info or validation descriptions, or the Response(...) method's descriptions.
+Currently JSONrouter will serve a documentation JSON file by default at the /openapi.spec.json path. This will describe each handler using any available info or validation descriptions, or the Response(...) method's descriptions.
 
-## Client JS libraries
-
-Currently GF will serve valid JS which can be used by any JS framework to integrate the API endpoints. The JS code is served at the /_.js path.
 
 </div>
