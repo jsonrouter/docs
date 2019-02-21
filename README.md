@@ -1,16 +1,18 @@
 # Contents
 <div id="contents">
-<h2>Main</h2><
+<h2>Main</h2>
 <a href="#features">Features</a><br>
 <a href="#httpRequest">http.Request request context</a><br>
 <a href="#fasthttp">Fasthttp implementation example</a><br>
-<h2>How it works</h2><br>
+<h2>How it works</h2>
 <a href="#howItWorks">How it works</a><br>
 <a href="#classicStyle">Classic style</a><br>
 <a href="#headersAndCORS">Headers & CORS setup</a><br>
-<h2>Validation</h2><br>
-<a href="#validation"> Validation</a><br>
-<h2>Other</h2><br>
+<h2>Validation</h2>
+<a href="#validation">Validation</a><br>
+<a href="#JSONParam">JSON parameter validation</a><br>
+<a href="#PathParam">Path parameter validation</a><br>
+<h2>Other</h2>
 <a href="#servingFiles">Serving files and folders</a><br>
 <a href="#abstraction">Abstraction modules</a><br>
 <a href="#autoGen">Auto-generated documentation</a>	<br>
@@ -124,6 +126,8 @@ func (app *App) api_product_get(req http.Request) *http.Status {
 
 # How it works
 
+<a href="#contents">Top</a>
+
 The root node (type *Node) which is returned when calling .NewRouter(...) represents the root path. Methods can be called on *Node type such as .Add(...) and .Param(...).
 
 Constructing http path routes with GF is as simple as chaining these methods, or creating variables which represent endpoints.
@@ -132,6 +136,8 @@ Constructing http path routes with GF is as simple as chaining these methods, or
 <div id="classicStyle">
 
 ## Classic style
+
+<a href="#contents">Top</a>
 
 ```
 
@@ -274,6 +280,8 @@ As you can see you can create restful API structures, whilst having all sanitati
 
 # Headers & CORS setup
 
+<a href="#contents">Top</a>
+
 Currently any headers settings applied to the node will apply to all children.
 
 ```
@@ -291,6 +299,8 @@ Currently any headers settings applied to the node will apply to all children.
 <div id="validation">
 
 # Validation
+
+<a href="#contents">Top</a>
 
 One of the awesome things about JSONrouter is that every path-parameter & top-level JSON-object-parameter can have validation. This can be provided by one of many out-of-the-box validation functions, but custom validation functions can also be used with this system, allowing you to create the correct validation that your app needs. Validation functions can be thought of as middleware functions that can modify the request object by adding new params using req.SetParam(key, value), which means the validated values will always be referenceable through the request object.
 
@@ -334,7 +344,13 @@ func Int() *validation.Config {
 }
 
 ```
+
+</div>
+<div id="JSONParam">
+
 ## JSON parameter validation
+
+<a href="#contents">Top</a>
 
 Using the .Payload method on any .POST(...) or .PUT(...) will allow the specification of the JSON request body payload. JSON objects can be described with a web.Payload (custom type equating to map[string]*validation.Config), which pairs keys with instances of the *validation.Config type. Each key will be validated with the func value of the bodyFunction field in the config struct.
 
@@ -362,7 +378,12 @@ When JSON params are added to the http.Request params map, they are prefixed wit
 
 ```
 
+</div>
+<div id="pathParam">
+
 ## Path parameter validation
+
+<a href="#contents">Top</a>
 
 ### validation.String(...)
 
@@ -469,6 +490,8 @@ No arguments can be supplied to this function.
 
 # Serving files and folders
 
+<a href="#contents">Top</a>
+
 Serving files can be done by adding a folder path, or by specifying an explicit filepath. The content-type of the file is auto-detected.
 
 ```
@@ -501,6 +524,8 @@ The default behaviour is that the files & their content-types are cached the fir
 <div id="abstraction">
 
 # Abstraction modules
+
+<a href="#contents">Top</a>
 
 Another cool feature of GF is that you can chain custom middleware functions together to allow the abstraction of common operations that your web application uses. To enable this feature, a module registry must be set to the GF config which maps the string key-names for modules to their web.ModuleFunction type instances.
 
