@@ -1,3 +1,8 @@
+# Contents
+
+<a href="#features">Features</a>a>
+
+
 # Golang/Go HTTP router for websites & JSON APIs
 
 Created by Alex Breadman, this software is released with a M.I.T. license.
@@ -7,7 +12,7 @@ UPDATES
 Everything is now focussed around writing valid openAPI v1/v2 spec for you.
 
 Initialising JSONrouter is done via the /platforms/* repos as a Router object.
-
+<div id="features">
 ## Features
 
 Node-based routing with no annoying conflicts when designing APIs.
@@ -24,7 +29,7 @@ Automatically handles all client errors in a dependable way.
 Allows custom validation & middleware functions.
 
 Allows very complex routing without creating a mess.
-
+</div>
 ## http.Request request context
 
 This package uses an interface to allow usage of different http implementations such as net/http package or valyala/fasthttp package. Unfortunately, fasthttp doesn't provide API identical to net/http, so a common interface type has been created to allow JSONrouter to operate with either dependency.
