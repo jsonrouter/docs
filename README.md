@@ -12,7 +12,9 @@ UPDATES
 Everything is now focussed around writing valid openAPI v1/v2 spec for you.
 
 Initialising JSONrouter is done via the /platforms/* repos as a Router object.
+
 <div id="features">
+
 ## Features
 
 Node-based routing with no annoying conflicts when designing APIs.
