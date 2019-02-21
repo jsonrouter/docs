@@ -21,8 +21,6 @@
 
 #  
 
-<br><br>
-
 # Golang/Go HTTP router for websites & JSON APIs
 
 Created by Alex Breadman, this software is released with a M.I.T. license.
