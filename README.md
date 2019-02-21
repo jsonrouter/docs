@@ -2,7 +2,7 @@
 
 <a href="#features">Features</a>
 
-<a href="https://github.com/jsonrouter/core/metrics">Metrics</a>
+<a href="https://github.com/jsonrouter/docs/tree/master/features">Features</a>
 
 
 # Golang/Go HTTP router for websites & JSON APIs
