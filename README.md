@@ -1,6 +1,8 @@
 # Contents
 
-<a href="#features">Features</a>a>
+<a href="#features">Features</a>
+
+<a href="https://github.com/jsonrouter/core/metrics">Metrics</a>
 
 
 # Golang/Go HTTP router for websites & JSON APIs
