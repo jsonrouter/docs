@@ -1,9 +1,23 @@
 # Contents
-
+<div id="contents">
+<h2>Main</h2>h2>
 <a href="#features">Features</a>
+<a href="#httpRequest">http.Request request context</a>
+<a href="#fasthttp">Fasthttp implementation example</a>
+<h2>How it works</h2>
+<a href="#howItWorks">How it works</a>
+<a href="#classicStyle">Classic style</a>
+<a href="#headersAndCORS">Headers & CORS setup</a>
+<h2>Validation</h2>
+<a href="#validation"> Validation</a>
+<h2>Other</h2>
+<a href="#servingFiles">Serving files and folders</a>
+<a href="#abstraction">Abstraction modules</a>
+<a href="#autoGen">Auto-generated documentation</a>	
 
-<a href="https://github.com/jsonrouter/docs/tree/master/features">Features</a>
 
+
+</div>
 
 # Golang/Go HTTP router for websites & JSON APIs
 
@@ -18,6 +32,8 @@ Initialising JSONrouter is done via the /platforms/* repos as a Router object.
 <div id="features">
 
 ## Features
+
+<a href="#contents">Top</a>
 
 Node-based routing with no annoying conflicts when designing APIs.
 
@@ -34,11 +50,16 @@ Allows custom validation & middleware functions.
 
 Allows very complex routing without creating a mess.
 </div>
+<div id="httpRequest">
+
 ## http.Request request context
 
 This package uses an interface to allow usage of different http implementations such as net/http package or valyala/fasthttp package. Unfortunately, fasthttp doesn't provide API identical to net/http, so a common interface type has been created to allow JSONrouter to operate with either dependency.
 
 If you are using net/http the request context (instance of RequestInterface) allows access to the http.ResponseWriter & *http.Request via the .Res() and .R() functions respectively.
+
+</div>
+<div id="fasthttp">
 
 ## go - fasthttp implementation example
 
@@ -100,11 +121,17 @@ func (app *App) api_product_get(req http.Request) *http.Status {
 
 ```
 
+</div>
+<div id="howItWorks">
+
 # How it works
 
 The root node (type *Node) which is returned when calling .NewRouter(...) represents the root path. Methods can be called on *Node type such as .Add(...) and .Param(...).
 
 Constructing http path routes with GF is as simple as chaining these methods, or creating variables which represent endpoints.
+
+</div>
+<div id="classicStyle">
 
 ## Classic style
 
@@ -244,6 +271,8 @@ The above psuedocode would create these routes:
 
 As you can see you can create restful API structures, whilst having all sanitation and validation handled by a dependable package.
 
+</div>
+<div id="headersAndCORS">
 
 # Headers & CORS setup
 
@@ -259,6 +288,9 @@ Currently any headers settings applied to the node will apply to all children.
 	)
 
 ```
+
+</div>
+<div id="validation">
 
 # Validation
 
@@ -434,6 +466,8 @@ This function allows any ISO2 language code, which is resolved as a *web.Languag
 
 No arguments can be supplied to this function.
 
+</div>
+<div id="servingFiles">
 
 # Serving files and folders
 
@@ -464,6 +498,9 @@ The default behaviour is that the files & their content-types are cached the fir
 	root.Config.NoCache()
 
 ```
+
+</div>
+<div id="abstraction">
 
 # Abstraction modules
 
@@ -496,7 +533,12 @@ An example of this is a piece of middleware that validates the user's session, a
 
 ```
 
+</div>
+<div id="autoGen">
+
 # Auto-generated documentation
+
+<a href="#contents">Top</a>
 
 The best feature of GF is that she will create documentation based on the internal state of the router. This allows front-end developers access to a definitive resource describing the structure of your API.
 
@@ -507,3 +549,5 @@ Currently GF will serve a documentation JSON file by default at the /_.json path
 ## Client JS libraries
 
 Currently GF will serve valid JS which can be used by any JS framework to integrate the API endpoints. The JS code is served at the /_.js path.
+
+</div>
