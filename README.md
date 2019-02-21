@@ -19,6 +19,8 @@
 
 </div>
 
+<br><br><br><br>
+
 # Golang/Go HTTP router for websites & JSON APIs
 
 Created by Alex Breadman, this software is released with a M.I.T. license.
@@ -54,6 +56,8 @@ Allows very complex routing without creating a mess.
 
 ## http.Request request context
 
+<a href="#contents">Top</a>
+
 This package uses an interface to allow usage of different http implementations such as net/http package or valyala/fasthttp package. Unfortunately, fasthttp doesn't provide API identical to net/http, so a common interface type has been created to allow JSONrouter to operate with either dependency.
 
 If you are using net/http the request context (instance of RequestInterface) allows access to the http.ResponseWriter & *http.Request via the .Res() and .R() functions respectively.
@@ -62,6 +66,8 @@ If you are using net/http the request context (instance of RequestInterface) all
 <div id="fasthttp">
 
 ## go - fasthttp implementation example
+
+<a href="#contents">Top</a>
 
 This version uses the fasthttp package rather than net/http package for http interfacing.
 
