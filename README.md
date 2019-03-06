@@ -136,7 +136,7 @@ func (app *App) api_product_get(req http.Request) *http.Status {
 
 The root node (type *Node) which is returned when calling .NewRouter(...) represents the root path. Methods can be called on *Node type such as .Add(...) and .Param(...).
 
-Constructing http path routes with GF is as simple as chaining these methods, or creating variables which represent endpoints.
+Constructing http path routes with JSONrouter is as simple as chaining these methods, or creating variables which represent endpoints.
 
 </div>
 <div id="classicStyle">
@@ -533,7 +533,7 @@ The default behaviour is that the files & their content-types are cached the fir
 
 <a href="#contents">Top</a>
 
-Another cool feature of GF is that you can chain custom middleware functions together to allow the abstraction of common operations that your web application uses. To enable this feature, a module registry must be set to the GF config which maps the string key-names for modules to their web.ModuleFunction type instances.
+Another cool feature of JSONrouter is that you can chain custom middleware functions together to allow the abstraction of common operations that your web application uses. To enable this feature, a module registry must be set to the JSONrouter config which maps the string key-names for modules to their web.ModuleFunction type instances.
 
 An example of this is a piece of middleware that validates the user's session, and creates a context for the request.
 
